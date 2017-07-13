@@ -2,6 +2,7 @@
   padding: .5em;
   font-size: 2em;
   float: right;
+  position: fixed;
   border: 3px solid black;
 }
 
