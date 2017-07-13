@@ -15,6 +15,6 @@ nav {
     display: none;
   }
   nav {
-    display: inline;
+    display: inline-block;
   }
 }
