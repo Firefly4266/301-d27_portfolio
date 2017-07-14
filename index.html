@@ -9,19 +9,46 @@
   <link rel="stylesheet" href="css/icon.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="css/module.css">
+  <header id="header">
+    <div class="icon-menu"></div>
+    <nav id="nav">
+      <ul id="icon">
+        <li class="icon-home" >Home</li>
+        <li class="icon-linkedin"><a target="" href="https://www.linkedin.com/in/john-gaines-57a32615/">Linkedin</a></li>
+        <li class="icon-github"><a target="" href="https://github.com/Firefly4266">Github</a></li>
+        <li class="icon-mail4"><a target="" href="mailto: gaines.johnp@gmail.com">Email</a></li>
+      </ul>     
+    </nav>    
+  </header>
 </head>
 <body>
   <div class="wrapper">
-    <div class="icon-menu"></div>
-    <nav>
-      <ul id="icon">
-        <li class="icon-home" >Home</li>
-        <li class="icon-linkedin"><a target="blank" href="https://www.linkedin.com/in/john-gaines-57a32615/">Linkedin</a></li>
-        <li class="icon-github"><a target="blank" href="https://github.com/Firefly4266">Github</a></li>
-        <li class="icon-mail4"><a target="blank" href="mailto: gaines.johnp@gmail.com">Email</a></li>
-      </ul>     
-    </nav>
+    <h1>Evolution of a photographer</h1>
+    <section id="locations" class="tab-content">
+      <div>
+        <ul id ="filter">
+          <li>
+            <select id ="city-filter">
+              <option value="">--Cities--</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <article class="template" data-category="411">
+        <header>
+          <section class="inspiration"></section>
+          <time pubdate datetime="2000-01-01"></time>
+        </header>
+        <section class="body"></section>
+        <!-- <a href="#" class="read-on">Read on</a> -->
+      </article>
+    </section>
+    <footer>
+      &copy; 2016 | All images are the sole property of John Gaines. Any use without my direct permission is strictly forbidden.
+    </footer>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="crossorigin="anonymous"></script>
+  <script src="contents.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
