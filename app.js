@@ -2,13 +2,13 @@
 
 var locations = [];
 
-function Location(localData) {
-  this.date = localData.date;
-  this.category = localData.category;
-  this.city = localData.city;
-  this.inspiration = localData.inspiration;
-  this.body = localData.body;
-  this.author = localData.author;
+function Location(locationObj) {
+  this.date = locationObj.date;
+  this.category = locationObj.category;
+  this.city = locationObj.city;
+  this.inspiration = locationObj.inspiration;
+  this.body = locationObj.body;
+  this.author = locationObj.author;
 }
 
 

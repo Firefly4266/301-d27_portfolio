@@ -3,5 +3,15 @@
 var articleView = {};
 
 articleView.populateFilters = function() {
-  $('article').each(function() {
-    var optionTag, city;
+  var template = $('template').html();
+  console.log(template); 
+  $('article').each(function(entry) {
+    // var optionTag, city;
+    var existiingEntry = new Entry({
+      body = entry.body,
+      inspiration = entry.inspiration
+    });
+  });
+}
+
+articleView.populateFilters();
