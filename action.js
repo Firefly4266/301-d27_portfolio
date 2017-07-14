@@ -8,10 +8,10 @@ articleView.populateFilters = function() {
   $('article').each(function(entry) {
     // var optionTag, city;
     var existiingEntry = new Entry({
-      body = entry.body,
-      inspiration = entry.inspiration
+      body: entry.body,
+      inspiration: entry.inspiration
     });
   });
-}
+};
 
 articleView.populateFilters();
