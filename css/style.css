@@ -10,6 +10,11 @@ body {
   border: 2px solid black;
 }
 
+#wrapper {
+  max-width: 100%;
+  height: auto;
+}
+
 ul {
   padding: .5em;
 }

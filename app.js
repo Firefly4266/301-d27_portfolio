@@ -2,11 +2,13 @@
 
 var locations = [];
 
-function Location() {
-  this.date = date;
-  this.category = category;
-  this.city = city;
-  this.inspiration = inspiration;
-  this.body = body;
-  this.author = author;
+function Location(localData) {
+  this.date = localData.date;
+  this.category = localData.category;
+  this.city = localData.city;
+  this.inspiration = localData.inspiration;
+  this.body = localData.body;
+  this.author = localData.author;
 }
+
+locationData.forEach()
