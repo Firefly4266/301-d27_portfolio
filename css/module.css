@@ -15,5 +15,11 @@ nav {
   }
   nav {
     display: inline;
+    text-align: center;
+  }
+
+  #nav li {
+    border: 2px solid black;
+    padding: .2em;
   }
 }
