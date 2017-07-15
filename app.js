@@ -14,6 +14,7 @@ function Location(locationObj) {
 
 Location.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
+  $newArticle.attr('data-city', this.city);
   $newArticle.removeClass('template');
   $newArticle.find('.body').html(this.body);
   return $newArticle;
