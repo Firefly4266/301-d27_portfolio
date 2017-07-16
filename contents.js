@@ -1,6 +1,6 @@
 'use strict';
 
-var locationData = [ 
+var rawData = [ 
   {
     date:             '01-05-16',
     category:         'people',

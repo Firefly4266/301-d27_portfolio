@@ -1,7 +1,34 @@
+* {
+  background-color: lightskyblue;
+}
+
 body {
   padding: 1em;
+  line-height: 1.5;
+  font-size: 100%;
 }
 
 .wrapper {
   text-align: center;
+}
+
+/*TEXT STYLES */
+/*<--------------------------------->  */
+p {
+  font-size: 1em;
+}
+
+/*LINK STYLES*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a:focus {
+  color: cornflowerblue;
+}
+
+a:visited {
+  color: purple;
 }

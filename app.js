@@ -1,28 +1,36 @@
 'use strict';
 
-var locations = [];
+var cities = [];
 
-function Location(locationObj) {
-  this.date = locationObj.date;
-  this.category = locationObj.category;
-  this.city = locationObj.city;
-  this.inspiration = locationObj.inspiration;
-  this.body = locationObj.body;
-  this.author = locationObj.author;
+function City(rawDataObj) {
+  this.date = rawDataObj.date;
+  this.category = rawDataObj.category;
+  this.city = rawDataObj.city;
+  this.inspiration = rawDataObj.inspiration;
+  this.body = rawDataObj.body;
+  this.author = rawDataObj.author;
 }
 
-
-Location.prototype.toHtml = function() {
+City.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
-  $newArticle.attr('data-city', this.city);
   $newArticle.removeClass('template');
+  if(!this.date){
+    $newArticle.addClass('draft'); 
+  }
+  $newArticle.attr('data-city', this.city);
   $newArticle.find('.body').html(this.body);
+  $newArticle.find('.template h1').text(this.date);
   return $newArticle;
 };
-locationData.forEach(function(locationObject){
-  locations.push(new Location(locationObject));
+
+rawData.forEach(function(rawDataObject){
+  cities.push(new City(rawDataObject));
 });
 
-locations.forEach(function(location){
-  $('#locations').append(location.toHtml);
+cities.forEach(function(city){
+  $('#cities').append(city.toHtml());
 });
+
+
+
+
