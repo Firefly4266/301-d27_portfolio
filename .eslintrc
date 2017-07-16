@@ -33,7 +33,8 @@
         "beforeEach": false,
         "afterEach": false,
         "before": false,
-        "after": false
+        "after": false,
+        "rawData": true
     },
     "ecmaFeatures": {
         "modules": true,

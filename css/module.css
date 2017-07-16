@@ -15,6 +15,16 @@ nav {
     display: none;
   }
   nav {
+<<<<<<< HEAD
     display: inline-block;
+=======
+    display: inline;
+    text-align: center;
+  }
+
+  #nav li {
+    border: 2px solid black;
+    padding: .2em;
+>>>>>>> a47e9700d33ab6b1352761af61effdbe83c239bc
   }
 }
