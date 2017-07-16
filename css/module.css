@@ -1,5 +1,30 @@
-.hamburger {
-  font-size: 3em;
+.icon-menu {
+  padding: .5em;
+  font-size: 2em;
   float: right;
+  position: fixed;
   border: 3px solid black;
+}
+
+nav {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+  nav {
+<<<<<<< HEAD
+    display: inline-block;
+=======
+    display: inline;
+    text-align: center;
+  }
+
+  #nav li {
+    border: 2px solid black;
+    padding: .2em;
+>>>>>>> a47e9700d33ab6b1352761af61effdbe83c239bc
+  }
 }

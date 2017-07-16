@@ -1,0 +1,28 @@
+
+
+ul {
+  padding: .5em;
+}
+li {
+  padding: 1em .5em .1em .5em;
+  display: inline-block;
+}
+
+img {
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
