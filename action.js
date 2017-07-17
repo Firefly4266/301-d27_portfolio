@@ -22,7 +22,7 @@ articleView.handleCityFilter = function() {
       $('article').hide();    
       $('article[data-city="' + $(this).val() + '"]').show();
     }else {
-      $('article').fadeIn();
+      $('article').show();
       $('article.template').hide();
     }
   });
