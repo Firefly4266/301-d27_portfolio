@@ -14,13 +14,29 @@ nav {
   .icon-menu {
     display: none;
   }
+
+  .heading-group1 {
+    margin: 1em;
+    padding: .5em;
+    font-size: 2em;
+  }
+
   nav {
     display: inline;
     text-align: center;
+  }
+
+  #nav ul {
+    border: black solid 3px;
   }
 
   #nav li {
     border: 2px solid black;
     padding: .2em;
   }
+
+  select {
+  width: 15em;
+  height: 1.5em;
+}
 }
