@@ -1,4 +1,8 @@
-
+.group-site-header {
+  text-align: center;
+  margin: 1em;
+  padding: .5em;
+}
 
 ul {
   padding: .5em;
@@ -17,6 +21,12 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+
+footer {
+  margin-top: 1em;
+  padding: .5em;
+  font-style: italic;
 }
 
 .pull-left {
