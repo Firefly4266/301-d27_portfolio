@@ -12,15 +12,8 @@ function City(rawDataObj) {
 }
 
 City.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.removeClass('template');
-  if(!this.date){
-    $newArticle.addClass('draft'); 
-  }
-  $newArticle.attr('data-city', this.city);
-  $newArticle.find('.body').html(this.body);
-  $newArticle.find('.template h1').text(this.date);
-  return $newArticle;
+  var template = Handlebars.compile($('#article-template').text());
+  return template(this);
 };
 
 rawData.forEach(function(rawDataObject){

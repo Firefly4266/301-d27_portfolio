@@ -11,6 +11,20 @@
   <link rel="stylesheet" type="text/css" href="css/module.css">
   <link rel="stylesheet" type="text/css" href="css/base.css">
   <header id="header" class="group-site-header">
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="group" data-city="{{city}}">
+        <header>
+          <h1>{{Inspiration}}</h1>
+          <section class="inspiration"></section>
+        </header>
+        <section class="body">{{{body}}}</section>
+        <hr class="seperator">
+      </article>
+    </script>
+  </header>
+</head>
+<body>
+  <div class="wrapper">
     <section class="heading-group1">
       <h1>Evolution of a photographer</h1>
     </section>
@@ -23,10 +37,6 @@
         <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-mail4">Email</a></li>
       </ul>     
     </nav>    
-  </header>
-</head>
-<body>
-  <div class="wrapper">
     <section id="cities" class="tab-content">
       <div>
         <ul id ="filter">
@@ -37,14 +47,6 @@
           </li>
         </ul>
       </div>
-      <article class="template group space" data-city="placeholder">
-        <header>
-          <h1>Inspiration</h1>
-          <section class="inspiration"></section>
-        </header>
-        <section class="body"></section>
-        <hr class="seperator">
-      </article>
     </section>
     <hr>
     <footer><img src="images/inset.jpg" height="150px" width="200px" alt="me in my home office">
