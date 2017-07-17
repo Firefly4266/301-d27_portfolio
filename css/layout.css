@@ -1,0 +1,64 @@
+.group-site-header {
+  text-align: center;
+  margin: 1em;
+  padding: .5em;
+}
+
+.seperator {
+  border: black solid 1px;
+}
+
+article {
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 80%;
+  border-top:solid black .2px;
+  border-radius: 15px;
+}
+
+ul {
+  padding: .5em;
+}
+li {
+  padding: 1em .5em .1em .5em;
+  display: inline-block;
+}
+
+img {
+  max-width: 300px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  margin: .3em;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  margin-top: 1em;
+  padding: .5em;
+  font-style: italic;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+#top {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  margin:.7em;
+  color: grey
+}

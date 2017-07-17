@@ -7,24 +7,27 @@
   <title>301 Portfolio</title>
   <link rel="stylesheet" type="text/css" href="vendor/styles/reset.css">
   <link rel="stylesheet" href="css/icon.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="css/module.css">
-  <header id="header">
-    <div class="icon-menu"></div>
-    <nav id="nav">
-      <ul id="icon">
-        <li class="icon-home" >Home</li>
-        <li class="icon-linkedin"><a target="" href="https://www.linkedin.com/in/john-gaines-57a32615/"></a>Linkedin</li>
-        <li class="icon-github"><a target="" href="https://github.com/Firefly4266"></a>Github</li>
-        <li class="icon-mail4"><a target="" href="mailto: gaines.johnp@gmail.com"></a>Email</li>
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <link rel="stylesheet" type="text/css" href="css/module.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <header id="header" class="group-site-header">
+    <section class="heading-group1">
+      <h1>Evolution of a photographer</h1>
+    </section>
+    <nav class="nav">
+      <div class="icon-menu"><a href="javascript:void(0);" id="menuButton" class="pull-right"></a></div>
+      <ul>
+        <li><a href="" target="" class="icon-home">Home</a></li>
+        <li><a href="http://www.linkedin.com/in/john-gaines-57a32615/" target="" class="icon-linkedin">Linkedin</a></li>
+        <li><a href="http://github.com/Firefly4266" target="" class="icon-github">Github</a></li>
+        <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-mail4">Email</a></li>
       </ul>     
     </nav>    
   </header>
 </head>
 <body>
   <div class="wrapper">
-    <h1 id="projectTitle">Evolution of a photographer</h1>
-    <section id="locations" class="tab-content">
+    <section id="cities" class="tab-content">
       <div>
         <ul id ="filter">
           <li>
@@ -34,18 +37,20 @@
           </li>
         </ul>
       </div>
-      <article class="template" data-category="411">
+      <article class="template group space" data-city="placeholder">
         <header>
+          <h1>Inspiration</h1>
           <section class="inspiration"></section>
-          <time pubdate datetime="2000-01-01"></time>
         </header>
         <section class="body"></section>
-        <!-- <a href="#" class="read-on">Read on</a> -->
+        <hr class="seperator">
       </article>
     </section>
-    <footer>
+    <hr>
+    <footer><img src="images/inset.jpg" height="150px" width="200px" alt="me in my home office">
       &copy; 2016 | All images are the sole property of John Gaines. Any use without my direct permission is strictly forbidden.
     </footer>
+    <p id="top"><a href="">top</a></p>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
