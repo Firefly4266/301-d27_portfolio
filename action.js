@@ -4,9 +4,7 @@ var articleView = {};
 
 articleView.populateFilters = function() {
   $('article').not('.template').each(function() {
-    var template = $('.template').html();
-    console.log(template);
-    
+    var template = $('.template').html();    
     var val = $(this).attr('data-city');
     var optionTag = '<option value="' + val + '">' + val + '</option>';
     /*This conditional checks to see if the current value is the same as the value we are on.
@@ -18,23 +16,16 @@ articleView.populateFilters = function() {
 };
 
 articleView.handleCityFilter = function() {
-  $('#city-filter').on('change', function(){
-    console.log($(this).val());
-    
+  $('#city-filter').on('change', function(){    
     if($(this).val()){
       var val = $(this).val();
-      console.log(val);      
       $('article').hide();    
       $('article[data-city="' + $(this).val() + '"]').show();
-      console.log( $('article[data-city="' + val + '"]'));    
     }else {
       $('article').fadeIn();
       $('article.template').hide();
     }
   });
-  // console.log(val);
-  // console.log($('article'));
-  // console.log( $('article[data-city="' + val + '"]'));
 };
 
 articleView.handleCityFilter();
