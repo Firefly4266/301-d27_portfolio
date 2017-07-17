@@ -16,9 +16,9 @@ articleView.populateFilters = function() {
 };
 
 articleView.handleCityFilter = function() {
+  $('article.template').hide();
   $('#city-filter').on('change', function(){    
     if($(this).val()){
-      var val = $(this).val();
       $('article').hide();    
       $('article[data-city="' + $(this).val() + '"]').show();
     }else {

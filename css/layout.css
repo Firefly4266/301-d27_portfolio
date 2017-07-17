@@ -4,6 +4,12 @@
   padding: .5em;
 }
 
+article {
+  padding: 2em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 ul {
   padding: .5em;
 }
@@ -13,7 +19,8 @@ li {
 }
 
 img {
-  max-width: 500px;
+  max-width: 300px;
+  border: 2px solid black;
   box-sizing: border-box;
 }
 
