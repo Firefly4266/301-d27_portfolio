@@ -12,7 +12,8 @@ article {
   margin: 0 auto;
   padding: 2em;
   max-width: 80%;
-  /* border:solid black .2px; */
+  border-top:solid black .2px;
+  border-radius: 15px;
 }
 
 ul {
@@ -48,6 +49,10 @@ footer {
 
 .pull-right {
   float: right;
+}
+
+.hidden {
+  display: none;
 }
 
 #top {

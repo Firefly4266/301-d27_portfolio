@@ -1,13 +1,30 @@
-.icon-menu {
-  padding: .5em;
-  font-size: 2em;
-  float: right;
-  position: fixed;
-  border: 3px solid black;
+nav {
+  padding: 0;
+  list-style: none;
 }
 
-nav {
+nav li {
+  margin-right: .3em;
+  font-size: 1em;
+  padding: .3em .3em;
+  border-bottom: 1px solid black;
+}
+
+.icon-menu {
+  padding: .2em;
+  font-size: 1.5em;
+  float: right;
+}
+
+.nav ul {
   display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+nav:hover ul {
+  display: block;
 }
 
 @media only screen and (min-width: 640px) {
@@ -21,22 +38,28 @@ nav {
     font-size: 2em;
   }
 
-  nav {
-    display: inline;
-    text-align: center;
+  .nav {
+    padding: .2em .2em .2em .2em;
   }
 
-  #nav ul {
+  .nav ul {
+    display: block;
     border: black solid 3px;
   }
 
-  #nav li {
+  .nav ul li {
+    display: inline;
+    text-align: center;
     border: 2px solid black;
     padding: .2em;
   }
 
+  .nav ul li:hover a {
+    color: green;
+  }
+
   select {
-  width: 15em;
-  height: 1.5em;
-}
+    width: 15em;
+    height: 1.5em;
+  }
 }
