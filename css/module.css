@@ -5,7 +5,7 @@ nav {
 
 nav li {
   margin-right: .3em;
-  font-size: 1em;
+  font-size: 1.5em;
   padding: .3em .3em;
   border-bottom: 1px solid black;
 }
@@ -44,7 +44,7 @@ nav:hover ul {
 
   .nav ul {
     display: block;
-    border: black solid 3px;
+    /* border: black solid 3px; */
   }
 
   .nav ul li {
@@ -60,6 +60,8 @@ nav:hover ul {
 
   select {
     width: 15em;
-    height: 1.5em;
+    height: 2.5em;
+    padding: .5em;
+    text-align: center;
   }
 }
