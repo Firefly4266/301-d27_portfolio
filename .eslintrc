@@ -34,6 +34,7 @@
         "afterEach": false,
         "before": false,
         "after": false,
+        "Handlebars": true,
         "rawData": true
     },
     "ecmaFeatures": {
