@@ -32,3 +32,4 @@ $(document).ready(function() {
   articleView.handleCityFilter();
   articleView.populateFilters();
 });
+
