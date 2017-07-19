@@ -35,6 +35,8 @@
         "before": false,
         "after": false,
         "Handlebars": true,
+        "Article": true,
+        "articleView": true,
         "rawData": true
     },
     "ecmaFeatures": {
