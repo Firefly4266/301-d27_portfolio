@@ -1,7 +1,5 @@
 'use strict';
 
-var cities = [];
-
 function City(rawDataObj) {
   this.date = rawDataObj.date;
   this.category = rawDataObj.category;
@@ -11,18 +9,38 @@ function City(rawDataObj) {
   this.author = rawDataObj.author;
 }
 
+City.all = [];
+
 City.prototype.toHtml = function() {
   var template = Handlebars.compile($('#article-template').text());
+  // TODO: this.body = marked(this.body);
   return template(this);
 };
 
-rawData.forEach(function(rawDataObject){
-  cities.push(new City(rawDataObject));
-});
+City.loadAll = function(rawData) {
+  rawData.forEach(function(ele){
+    City.all.push(new City(ele));
+  });
+};
 
-cities.forEach(function(city){
-  $('#cities').append(city.toHtml());
-});
+
+City.fetchAll = function(){
+  if (localStorage.rawData) {
+    City.loadAll(JSON.parse(localStorage.rawData));
+    articleView.initIndexPage();
+  }else {    
+    $.getJSON('/contents/contents.json')
+    .then(function(rawData) {
+      City.loadAll(rawData);
+      localStorage.rawData = JSON.stringify(rawData);
+      articleView.initIndexPage();
+    }, function(err){
+      console.error(err);
+    });
+  }
+};
+
+
 
 
 

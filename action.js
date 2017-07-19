@@ -28,7 +28,12 @@ articleView.handleCityFilter = function() {
   });
 };
 
-$(document).ready(function() {
+articleView.initIndexPage = () => {
+  City.all.forEach((city) => {
+    $('#cities').append(city.toHtml());
+  });
+  
   articleView.handleCityFilter();
   articleView.populateFilters();
-});
+};
+
