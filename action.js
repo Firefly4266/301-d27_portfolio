@@ -31,9 +31,9 @@ articleView.handleCityFilter = function() {
 articleView.initIndexPage = () => {
   City.all.forEach((city) => {
     $('#cities').append(city.toHtml());
-  });
-  
+  });  
   articleView.handleCityFilter();
   articleView.populateFilters();
 };
+
 
