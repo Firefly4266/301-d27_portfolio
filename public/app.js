@@ -2,8 +2,7 @@
 
 var app = app || {};
 
-(function module(){
-
+(function(module){
   function City(rawDataObj) {
     this.date = rawDataObj.date;
     this.category = rawDataObj.category;
@@ -31,7 +30,7 @@ var app = app || {};
   City.fetchAll = function(){
     if (localStorage.rawData) {
       City.loadAll(JSON.parse(localStorage.rawData));
-      articleView.initIndexPage();
+      app.articleView.initIndexPage();
     }else {    
       $.getJSON('/contents/contents.json')
       .then(function(rawData) {

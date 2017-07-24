@@ -32,7 +32,7 @@ var app = app || {};
   };
 
   articleView.initIndexPage = () => {
-    City.all.forEach((city) => {
+    app.City.all.forEach((city) => {
       $('#cities').append(city.toHtml());
     });  
     articleView.handleCityFilter();
