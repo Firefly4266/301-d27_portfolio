@@ -101,6 +101,8 @@ db
 build/
 dist/
 
+githubToken.js
+githubToken
 
 .vscode/*
 !.vscode/settings.json
