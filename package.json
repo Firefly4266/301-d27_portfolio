@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Firefly4266/301-d27_portfolio#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "page.js": "^4.13.3"
   }
 }
