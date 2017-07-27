@@ -42,9 +42,19 @@ var app = app || {};
       });
     }
   };
+
+  City.numwords.all = () => {
+    return City.all.map(City => city.body.match (/\b\w+/g).length)
+                   .reduce((a, b)=> a + b);
+  };
+  console.log(City.numwords.all);
+  
+
   module.City = City;
 })(app);
 
+
+$.get('/github/user/repos')
 
 
 

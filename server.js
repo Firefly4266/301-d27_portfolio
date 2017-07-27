@@ -3,12 +3,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const pg = require('pg');
+const requestProxy = require('express-request-proxy');
+const PORT = process.env.PORT || 5000;
 
 
-let app = express();
+const app = express();
+
+let conString = process.env.conString;
+const client = new pg.Client(conString);
+client.connect();
+client.on('error', err => console.error(err));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static('./public'));
 
 app.listen(5000, ()=> {
   console.log('Server up on Port: 5000');
