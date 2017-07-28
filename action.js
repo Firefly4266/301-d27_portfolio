@@ -28,5 +28,15 @@ articleView.handleCityFilter = function() {
   });
 };
 
+articleView.handleNav = function(){
+  $('.nav').on('click', '.tab', function(e) {
+    e.preventDefault();
+    $('.tab-value').hide();
+    $('#' + $(this).data('value')).show();
+  });
+  $('.nav .tab:first').click();
+};
+
 articleView.handleCityFilter();
 articleView.populateFilters();
+articleView.handleNav();

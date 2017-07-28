@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>301 Portfolio</title>
   <link rel="stylesheet" type="text/css" href="vendor/styles/reset.css">
-  <link rel="stylesheet" href="css/icon.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/layout.css">
   <link rel="stylesheet" type="text/css" href="css/module.css">
   <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -17,17 +17,18 @@
     <nav class="nav">
       <div class="icon-menu"><a href="javascript:void(0);" id="menuButton" class="pull-right"></a></div>
       <ul>
-        <li><a href="" target="" class="icon-home">Home</a></li>
-        <li><a href="http://www.linkedin.com/in/john-gaines-57a32615/" target="" class="icon-linkedin">Linkedin</a></li>
+        <li class="tab" data-value="cities"><a href="#" class="icon-home">Home</a></li>
+        <li class="tab" data-value="about"><a href="#" class="icon-info">INFO</a></li>
+        <li><a href="http://www.linkedin.com/in/john-gaines-57a32615/" target="" class="icon-linkedin2">Linkedin</a></li>
         <li><a href="http://github.com/Firefly4266" target="" class="icon-github">Github</a></li>
-        <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-mail4">Email</a></li>
+        <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-paper-plane">Email</a></li>
       </ul>     
     </nav>    
   </header>
 </head>
 <body>
   <div class="wrapper">
-    <section id="cities" class="tab-content">
+    <section id="cities" class="tab-content tab-value">
       <div>
         <ul id ="filter">
           <li>
@@ -47,6 +48,11 @@
       </article>
     </section>
     <hr>
+    <section class="about tab-value">
+      <header>A photographic excert of a small piece of my life.</header>
+        <p></p>
+        <p></p>
+    </section>
     <footer><img src="images/inset.jpg" height="150px" width="200px" alt="me in my home office">
       &copy; 2016 | All images are the sole property of John Gaines. Any use without my direct permission is strictly forbidden.
     </footer>
