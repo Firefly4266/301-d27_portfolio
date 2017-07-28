@@ -30,6 +30,15 @@ var app = app || {};
       }
     });
   };
+  
+  articleView.handleNav = function(){
+    $('.nav').on('click', '.tab', function(e) {
+      e.preventDefault();
+      $('.tab-value').hide();
+      $('#' + $(this).data('value')).show();
+    });
+    $('.nav .tab:first').click();
+  };
 
   articleView.initIndexPage = () => {
     app.City.all.forEach((city) => {
@@ -37,6 +46,7 @@ var app = app || {};
     });  
     articleView.handleCityFilter();
     articleView.populateFilters();
+    articleView.handleNav();
   };
   module.articleView = articleView;
 })(app);
