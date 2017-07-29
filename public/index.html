@@ -31,8 +31,8 @@
     <nav class="nav">
       <div class="icon-menu"><a href="javascript:void(0);" id="menuButton" class="pull-right"></a></div>
       <ul>
-        <li class="tab" data-value="cities"><a href="#" class="icon-home">Home</a></li>
-        <li class="tab" data-value="about"><a href="#" class="icon-info">INFO</a></li>
+        <li class="tab" data-value="cities"><a href="/" class="icon-home">Home</a></li>
+        <li class="tab" data-value="info"><a href="/info" class="icon-info">INFO</a></li>
         <li><a href="http://www.linkedin.com/in/john-gaines-57a32615/" target="" class="icon-linkedin2">Linkedin</a></li>
         <li><a href="http://github.com/Firefly4266" target="" class="icon-github">Github</a></li>
         <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-paper-plane">Email</a></li>
@@ -40,7 +40,7 @@
     </nav>    
     <section id="cities" class="tab-content tab-value">
       <div>
-        <ul id ="filter">
+        <ul id="filter">
           <li>
             <select id ="city-filter">
               <option value="">--Cities--</option>
@@ -50,21 +50,29 @@
       </div>
     </section>
     <hr>
-    <section class="about tab-value">
+    <section class="info tab-value">
     <header>A photographic excert of a small piece of my life.</header>
       <p></p>
       <p></p>
-  </section>
+    </section>
     <footer><img src="images/inset.jpg" height="150px" width="200px" alt="me in my home office">
       &copy; 2016 | All images are the sole property of John Gaines. Any use without my direct permission is strictly forbidden.
     </footer>
     <p id="top"><a href="">top</a></p>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+   <!-- <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script> -->
+   <script src="../vendor/scripts/page.js"></script>
   <script src="contents/contents.json"></script>
-  <script src="action.js"></script>
-  <script src="app.js"></script>
+  <script src="../scripts/models/action.js"></script>
+  <script src="../scripts/views/app.js"></script>
   <script>app.City.fetchAll()</script>
+  <script src="../scripts/controllers/articleController.js"></script>
+  <script src="../scripts/controllers/infoController.js"></script>
+  <script src="../scripts/controllers/routes.js"></script>
 </body>
 </html>
