@@ -8,7 +8,7 @@ const port = process.env || 5000;
 const app = express();
 
 let conString = process.env.PG_PASSWORD;
-const client = new pg.client(conString);
+const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
 
