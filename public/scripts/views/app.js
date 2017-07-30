@@ -26,6 +26,10 @@ var app = app || {};
     });
   };
 
+  City.numWordsAll = () => {
+    return City.all.map(City => City.body.match(/\b\w+/g).length)
+                      .reduce((a, b) => a + b);                      
+  };
 
   City.fetchAll = function(){
     if (localStorage.rawData) {
@@ -42,19 +46,9 @@ var app = app || {};
       });
     }
   };
-
-  // City.numwords.all = () => {
-  //   return City.all.map(City => City.body.match (/\b\w+/g).length)
-  //                  .reduce((a, b)=> a + b);
-  // };
-  // console.log(City.numwords.all);
-  
-
   module.City = City;
 })(app);
 
-
-// $.get('/github/user/repos')
 
 
 
