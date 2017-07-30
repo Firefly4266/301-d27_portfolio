@@ -47,6 +47,8 @@ var app = app || {};
     articleView.handleCityFilter();
     articleView.populateFilters();
     articleView.handleNav();
+    app.City.numWordsAll();
+    console.log(app.City.numWordsAll());
   };
   module.articleView = articleView;
 })(app);

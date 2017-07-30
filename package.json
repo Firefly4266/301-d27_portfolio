@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Firefly4266/301-d27_portfolio#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "pg": "^7.0.2"
   }
 }
