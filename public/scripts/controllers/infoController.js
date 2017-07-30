@@ -9,5 +9,4 @@ var app = app || {};
     $('.info').show();
   };
   module.infoController = infoController; 
-
 })(app);
