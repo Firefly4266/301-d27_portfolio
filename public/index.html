@@ -31,10 +31,11 @@
     <nav class="nav">
       <div class="icon-menu"><a href="javascript:void(0);" id="menuButton" class="pull-right"></a></div>
       <ul>
-        <li><a href="" target="" class="icon-home">Home</a></li>
-        <li><a href="http://www.linkedin.com/in/john-gaines-57a32615/" target="" class="icon-linkedin">Linkedin</a></li>
+        <li class="tab" data-value="cities"><a href="#" class="icon-home">Home</a></li>
+        <li class="tab" data-value="about"><a href="#" class="icon-info">INFO</a></li>
+        <li><a href="http://www.linkedin.com/in/john-gaines-57a32615/" target="" class="icon-linkedin2">Linkedin</a></li>
         <li><a href="http://github.com/Firefly4266" target="" class="icon-github">Github</a></li>
-        <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-mail4">Email</a></li>
+        <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-paper-plane">Email</a></li>
       </ul>     
     </nav>    
     <section id="cities" class="tab-content">
@@ -57,8 +58,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="contents/contents.json"></script>
-  <script src="app.js"></script>
-  <script src="action.js"></script>
+  <script src="./app.js"></script>
+  <script src="./action.js"></script>
   <script>City.fetchAll()</script>
 </body>
 </html>

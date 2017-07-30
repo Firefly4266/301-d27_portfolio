@@ -2,7 +2,7 @@
   "name": "301-d27_portfolio",
   "version": "1.0.0",
   "description": "**** This project will showcase different iterations of the technologies taught at CodeFellows.  My project in perticular will do this through a display of pictures taken by me of some of the places I've lived and worked.",
-  "main": "action.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Firefly4266/301-d27_portfolio/issues"
   },
