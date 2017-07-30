@@ -28,12 +28,21 @@ articleView.handleCityFilter = function() {
   });
 };
 
+articleView.handleNav = () => {
+  $('.nav').on('click', '.tab', function(e) {
+    e.preventDefault;
+    $('.tab-value').hide();
+    $('#' + $(this).data('value')).show();
+  });
+};
+
 articleView.initIndexPage = () => {
   City.all.forEach((city) => {
     $('#cities').append(city.toHtml());
   });  
   articleView.handleCityFilter();
   articleView.populateFilters();
+  articleView.handleNav();
 };
 
 
