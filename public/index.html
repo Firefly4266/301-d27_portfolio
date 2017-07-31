@@ -21,6 +21,17 @@
         <hr class="seperator">
       </article>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{name}}</h3>
+        </a>
+        <p>Description: {{descritptio}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+      </li>
+    </script>
   </header>
 </head>
 <body>
@@ -50,10 +61,13 @@
       </div>
     </section>
     <hr>
-    <section class="info tab-value">
+    <section id="info" class="tab-value">
     <header>A photographic excert of a small piece of my life.</header>
-      <p></p>
-      <p></p>
+      <ul>
+        <li>Life</li>
+        <li>Liberty</li>
+        <li>And the pursuit on a perfect cup of coffee</li>
+      </ul>
     </section>
     <footer><img src="images/inset.jpg" height="150px" width="200px" alt="me in my home office">
       &copy; 2016 | All images are the sole property of John Gaines. Any use without my direct permission is strictly forbidden.
@@ -66,11 +80,14 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="../vendor/scripts/page.js"></script>
-  <script src="contents/contents.json"></script>
+
+  <script src="../scripts/models/githubToken.js"></script>
+
   <script src="../scripts/models/action.js"></script>
   <script src="../scripts/views/app.js"></script>
-  <script>app.City.fetchAll()</script>
   <script src="../scripts/controllers/articleController.js"></script>
+  <script src="../scripts/models/repo.js"></script>
+  <script src="../scripts/views/repoView.js"></script>
   <script src="../scripts/controllers/infoController.js"></script>
   <script src="../scripts/controllers/routes.js"></script>
 </body>

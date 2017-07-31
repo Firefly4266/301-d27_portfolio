@@ -40,7 +40,7 @@ var app = app || {};
       .then(function(rawData) {
         City.loadAll(rawData);
         localStorage.rawData = JSON.stringify(rawData);
-        articleView.initIndexPage();
+        app.articleView.initIndexPage();
       }, function(err){
         console.error(err);
       });

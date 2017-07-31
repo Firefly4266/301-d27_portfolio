@@ -6,8 +6,8 @@ var app = app || {};
   const infoController = {};
   infoController.index = () => {
     $('.tab-value').hide();
-    $('.info').show();
+    $('#info').show();
+    app.repos.requestRepos(app.repoView.index);
   };
   module.infoController = infoController; 
-
 })(app);
