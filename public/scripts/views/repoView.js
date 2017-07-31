@@ -7,8 +7,8 @@ var app = app || {};
   const choice = function() {
     let $info = $('#info');
     $info.find('ul').empty();
-    $info.show();
     $('.tab-value').hide();
+    $info.show();
   };
   const render = Handlebars.compile($('#repo-template').text());
   repoView.index = function() {
