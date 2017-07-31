@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-let conString = process.env.PG_PASSWORD || process.env.DATABASE_URL;
+const conString = process.env.DATABASE_URL || process.env.PG_PASSWORD;
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
@@ -151,7 +151,7 @@ function loadDB() {
    CREATE TABLE IF NOT EXISTS cities (
      cities_id SERIAL PRIMARY KEY,
      date DATE,
-     category VARCHAR (255) NOT NULL,
+     category VARCHAR (255),
      city VARCHAR (255) NOT NULL,
      inspiration VARCHAR (255) NOT NULL,
      body TEXT NOT NULL,
