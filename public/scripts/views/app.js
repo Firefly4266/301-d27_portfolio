@@ -26,6 +26,10 @@ var app = app || {};
     });
   };
 
+  City.numWordsAll = () => {
+    return City.all.map(City => City.body.match(/\b\w+/g).length)
+                      .reduce((a, b) => a + b);                      
+  };
 
   City.fetchAll = function(){
     if (localStorage.rawData) {
@@ -36,7 +40,7 @@ var app = app || {};
       .then(function(rawData) {
         City.loadAll(rawData);
         localStorage.rawData = JSON.stringify(rawData);
-        articleView.initIndexPage();
+        app.articleView.initIndexPage();
       }, function(err){
         console.error(err);
       });

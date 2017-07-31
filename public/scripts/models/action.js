@@ -37,7 +37,6 @@ var app = app || {};
     });  
     articleView.handleCityFilter();
     articleView.populateFilters();
-    // articleView.handleNav();
   };
   module.articleView = articleView;
 })(app);
