@@ -151,9 +151,9 @@ function loadDB() {
    CREATE TABLE IF NOT EXISTS cities (
      cities_id SERIAL PRIMARY KEY,
      date DATE,
-     category VARCHAR (255),
-     city VARCHAR (255) NOT NULL,
-     inspiration VARCHAR (255) NOT NULL,
+     category VARCHAR(20),
+     city VARCHAR(255),
+     inspiration VARCHAR(255),
      body TEXT NOT NULL,
      author TEXT);
   `)
