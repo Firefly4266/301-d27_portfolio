@@ -1,16 +1,15 @@
 'use strict';
 
+const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
 const pg = require('pg');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 5000;
 
-
 const app = express();
 
-let conString = process.env.DATABASE_URL || process.env.PG_PASSWORD;
+let conString = process.env.PG_PASSWORD || process.env.DATABASE_URL;
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
@@ -19,7 +18,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('./public'));
 
-app.get('/new',(req, res) => res.sendFile('new.html', {root: './public'}));
+function proxyGitHub(request, response) {
+  console.log('Routing to Github request for', request.params[0]);
+  (requestProxy({
+    url: `https://api.github.com/${request.params[0]}`,
+    headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}
+  }))(request, response);
+}
+
+app.get('/github/*', proxyGitHub);
+
+app.get('/new',(request, response) => res.sendFile('new.html', {root: './public'}));
 
 app.get('/cities',(req, res) => {
   client.query('SELECT * FROM cities')
