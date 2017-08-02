@@ -17,7 +17,7 @@ client.on('error', err => console.error(err));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('./public'));
-app.use('logger');
+app.use(logger);
 
 function proxyGitHub(request, response) {
   console.log('Routing to Github request for', request.params[0]);
@@ -170,4 +170,3 @@ let logger = function(){
   console.log('Logging middleware');
   next();
 };
-logger();
