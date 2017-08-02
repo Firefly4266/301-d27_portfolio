@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>301 Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="vendor/styles/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <link rel="stylesheet" type="text/css" href="css/module.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <header id="header" class="group-site-header">
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="group" data-city="{{city}}">
+        <header>
+          <h1>{{Inspiration}}</h1>
+          <section class="inspiration"></section>
+        </header>
+        <section class="body">{{{body}}}</section>
+        <hr class="seperator">
+      </article>
+    </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{name}}</h3>
+        </a>
+        <p>Description: {{descritptio}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+      </li>
+    </script>
+  </header>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="heading-group1">
+      <h1>Evolution of a photographer</h1>
+    </section>
+    <nav class="nav">
+      <div class="icon-menu"><a href="javascript:void(0);" id="menuButton" class="pull-right"></a></div>
+      <ul>
+        <li class="tab" data-value="cities"><a href="/" class="icon-home">Home</a></li>
+        <li class="tab" data-value="info"><a href="/info" class="icon-info">INFO</a></li>
+        <li><a href="http://www.linkedin.com/in/john-gaines-57a32615/" target="" class="icon-linkedin2">Linkedin</a></li>
+        <li><a href="http://github.com/Firefly4266" target="" class="icon-github">Github</a></li>
+        <li><a href="mailto: gaines.johnp@gmail.com" target="" class="icon-paper-plane">Email</a></li>
+      </ul>     
+    </nav>    
+    <section id="cities" class="tab-content tab-value">
+      <div>
+        <ul id="filter">
+          <li>
+            <select id ="city-filter">
+              <option value="">--Cities--</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="info" class="tab-value">
+    <header>A photographic excert of a small piece of my life.</header>
+      <ul>
+        <li>Life</li>
+        <li>Liberty</li>
+        <li>And the pursuit on a perfect cup of coffee</li>
+      </ul>
+    </section>
+    <footer><img src="images/inset.jpg" height="150px" width="200px" alt="me in my home office">
+      &copy; 2016 | All images are the sole property of John Gaines. Any use without my direct permission is strictly forbidden.
+    </footer>
+    <p id="top"><a href="#">top</a></p>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="../vendor/scripts/page.js"></script>
+
+  <script src="../scripts/models/action.js"></script>
+  <script src="../scripts/views/app.js"></script>
+  <script src="../scripts/controllers/articleController.js"></script>
+  <script src="../scripts/models/repo.js"></script>
+  <script src="../scripts/views/repoView.js"></script>
+  <script src="../scripts/controllers/infoController.js"></script>
+  <script src="../scripts/controllers/routes.js"></script>
+</body>
+</html>
